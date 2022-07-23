@@ -37,7 +37,7 @@ const userSchema = mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // 보시면 export default로 되는건 그냥 User 이런식으로 되고 
-// 그냥 export 로 되는건 { User } 이런식으로 가져오셔야 됩니다 ^^ 
+// 그냥 exports 로 되는건 { User } 이런식으로 가져오셔야 됩니다 ^^ 
 // 그리고 export default는 한 파일에 한가지밖에 못합니다 ~ ! 
-
-module.export = { User };
+// export x exports o
+module.exports = { User };
