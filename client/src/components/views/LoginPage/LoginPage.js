@@ -12,7 +12,7 @@ function LoginPage(props) {
   const Dispatch = useDispatch();
   let navigate = useNavigate();
 
-  // const errorMsgRef = useRef();
+  let errorMsgRef = useRef();
 
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
@@ -37,7 +37,8 @@ function LoginPage(props) {
       if(response.payload.loginSuccess) {
         navigate('/')
       } else {
-        alert('error occur')
+        errorMsgRef.current.style = "visibility: visible"
+        // alert('error occur')
         // alert('error on')
         // console.log(errorMsgRef);
         // errorMsgRef[0].style.display = 'block';
@@ -82,7 +83,7 @@ function LoginPage(props) {
                             </div>
 
 
-                            <div className={style.loginError}>아이디(로그인 전용 아이디) 또는 비밀번호를 잘못 입력했습니다.</div>
+                            <div ref={errorMsgRef} className={style.loginError}>아이디(로그인 전용 아이디) 또는 비밀번호를 잘못 입력했습니다.</div>
 
                             
                             <div id={style.buttonLogin}>

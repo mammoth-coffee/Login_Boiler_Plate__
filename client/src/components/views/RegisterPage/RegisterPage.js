@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import {registerUser} from '../../../_actions/user_action'
 import { useNavigate } from 'react-router-dom';
@@ -10,6 +10,10 @@ function RegisterPage(props) {
 
   const Dispatch = useDispatch();
   let navigate = useNavigate();
+
+  let mustCheckBox = useRef();
+  let noCheckMsg = useRef();
+  let PasswordLength = useRef();
 
   const [Email, setEmail] = useState("");
   const [Name, setName] = useState("");
@@ -32,11 +36,18 @@ function RegisterPage(props) {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-  
+    if(Password.length<6) {
+      PasswordLength.current.style = "visibility: visible"
+      return
+    }
     if(Password != ConfirmPassword) {
+      // console.log(mustCheckBox.current.checked);
       return alert('비밀번호와 비밀번호 확인은 같아야합니다.')
     }
-
+    if(!mustCheckBox.current.checked) {
+      noCheckMsg.current.style = "visibility: visible"
+      return
+    }
     let body = {
       email : Email,
       name : Name,
@@ -49,6 +60,7 @@ function RegisterPage(props) {
         navigate('/login')
       } else {
         alert('Register error')
+        
       }
     })
 
@@ -88,13 +100,15 @@ function RegisterPage(props) {
             
                             <div id={style.password}>
                                 <input type="password" name="password" placeholder="비밀번호" id={style.passwordInput} value={Password} onChange={onPasswordHandler} />
-                                <FontAwesomeIcon icon={faLock} id={style.lockIcon} />
-                                <FontAwesomeIcon icon={faEyeSlash} id={style.eyeSlashIcon} />
+                                <FontAwesomeIcon icon={faLock} className={style.lockIcon} />
+                                <FontAwesomeIcon icon={faEyeSlash} className={style.eyeSlashIcon} />
                             </div>
-                            
+                            <div ref={PasswordLength} className={style.passwordLength}>6글자 이상이어야 합니다.</div>
                           {/* 임시 비밀번호 확인 */}
-                            <div>
-                                <input type="password" name="confirm_password" placeholder="비밀번호확인" value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
+                            <div id={style.confirmPassword}>
+                                <input type="password" name="confirm_password" placeholder="비밀번호확인" id={style.confirmPasswordInput} value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
+                                <FontAwesomeIcon icon={faLock} className={style.lockIcon} />
+                                <FontAwesomeIcon icon={faEyeSlash} className={style.eyeSlashIcon} />
                             </div>
 
                             <div class={style.pwCondition}>
@@ -103,7 +117,7 @@ function RegisterPage(props) {
 
                             <div id={style.agreement}>
                                 <div class={style.btn} id={style.btn1}>
-                                    <input type="checkbox" id={style.check1} />
+                                    <input type="checkbox" id={style.check1} ref= {mustCheckBox}/>
                                     <span class={style.checkSentence}>(필수) 서비스 이용약관, 개인정보 처리방침에 동의</span>
                                 </div>
                                 <div class={style.btn} id={style.btn2}>
@@ -113,7 +127,8 @@ function RegisterPage(props) {
                             </div>
 
                             <div id={style.signIn}>
-                                <input type="submit" value="가입하기" id={style.signInBtn} />
+                              <div ref={noCheckMsg} className={style.notChecked}>필수 항목 동의가 필요합니다.</div>
+                                <input type="submit" value="가입하기" id={style.signInBtn}/>                               
                             </div>
                          </form>
                       </div>

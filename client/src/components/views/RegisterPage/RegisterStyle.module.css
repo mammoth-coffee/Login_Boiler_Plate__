@@ -103,16 +103,16 @@ html, body {
     width : 100%;
 }
 
-#name, #email, #password {
+#name, #email, #password, #confirmPassword{
     width: 100%;
     position: relative;
     display: flex;
     flex: row;
     align-items: center;
-    margin-top : 3vh;
+    margin-top : 5vh;
 }
 
-#nameInput, #emailInput, #passwordInput {
+#nameInput, #emailInput, #passwordInput, #confirmPasswordInput {
     width: 100%;
     /* color : #b0b0b0; */
     font-size: 20px;
@@ -124,18 +124,18 @@ html, body {
     /* margin-top: 28px; */
 }
 
-#nameInput::placeholder, #emailInput::placeholder, #passwordInput::placeholder {
+#nameInput::placeholder, #emailInput::placeholder, #passwordInput::placeholder, #confirmPasswordInput::placeholder {
     color: #BDBDBD;
 }
 
-#userIcon, #envelopeIcon, #lockIcon {
+#userIcon, #envelopeIcon, .lockIcon {
     color: #A1A1A1;
     position: absolute;
     left: 23px;
     /* top: 50px; */
 }
 
-#eyeSlashIcon {
+.eyeSlashIcon {
     color: #A1A1A1;
     position: absolute;
     right: 23px;
@@ -196,6 +196,16 @@ input[type="checkbox"] {
     cursor: pointer;
 
     padding: 17px auto;
-    margin-top: 4vh; 
+    margin-top: 5vh; 
     margin-bottom: 9vh;
 }
+
+.notChecked, .passwordLength {
+    color : #eb5757;
+    font-size: 16px;
+    font-weight: 700;
+    visibility: hidden;
+    position: absolute;
+    margin-left : 25px;
+}
+

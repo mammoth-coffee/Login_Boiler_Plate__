@@ -160,10 +160,10 @@ html, body {
 }
 
 .loginError {
-    color : #e85757;
+    color : #eb5757;
     font-size: 16px;
     font-weight: 700;
-    /* display: none; */
+    visibility: hidden;
 }
 
 .loginAlert {

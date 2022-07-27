@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+@font-face {
+  font-family: 'NanumSquare';
+  /* font-style: normal; */
+  font-weight: 100;
+  src: url("./fonts/NanumSquareL.ttf") format('ttf')
+  /* url("./fonts/NanumSquareL.otf") format('truetype') */
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  /* font-style: normal; */
+  font-weight: regular;
+  src: url("./fonts/NanumSquareR.ttf") format('ttf')
+  /* url("./fonts/NanumSquareR.otf") format('truetype') */
+}
+
+
+@font-face {
+  font-family: 'NanumSquare';
+  /* font-style: normal; */
+  font-weight: 700;
+  src: url("./fonts/NanumSquareB.ttf") format('ttf')
+  /* url("./fonts/NanumSquareB.otf") format('truetype') */
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  /* font-style: normal; */
+  font-weight: 800;
+  src: url("./fonts/NanumSquareEB.ttf") format('ttf')
+  /* url("./fonts/NanumSquareEB.otf") format('truetype') */
+}
