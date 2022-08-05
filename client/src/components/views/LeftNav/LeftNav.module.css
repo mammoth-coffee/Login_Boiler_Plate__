@@ -1,0 +1,145 @@
+#side_left {
+    float: left;
+    width: 17vw;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+}
+
+.left_line {
+    width:2px;
+    height:100%;
+    position: absolute;
+    float: right;
+    right: 0;
+}
+
+.helper_text {
+    position: absolute;
+    top: 1%;
+    right: 25%;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #267DFF;
+    font-size: 26px;
+    font-weight: 900;
+
+}
+
+.logo_img {
+    top: 4.3%; left: 26%; position: absolute;
+}
+
+
+.menu_wrap{ margin: 0; padding: 0; }
+
+
+.menu_wrap{
+    margin-top :90px;
+    padding: 60px;
+    background-color: #fff;
+    display: inline-block;
+    margin-left:0;
+    position:absolute;
+    left:0;
+    right:1px;
+
+}
+
+.menu_wrap label{
+    margin: 20px 0;
+    display: block;
+    font-weight: 700;
+    color:#333;
+    line-height: 20px;
+    position: relative;
+    padding-left: 30px;
+    font-size:1vw;
+    text-align: justify;
+
+}
+
+.menu_wrap ul li{
+    line-height: 40px;
+    margin-left: -10px;
+    font-size:1vw;
+    color: black;
+    text-align: justify;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu_wrap label::before{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    display: inline-block;
+    content: '';
+    width: 19px;
+    height: 19px;
+    background-image: url(../../../../public/img/blueArrow.png);
+    cursor: pointer;
+}
+
+.menu_wrap .sub_menu{
+    display: none;
+}
+
+.menu_wrap input:checked + label::before{
+    background-image: url(../../../../public/img/arrow_down.png);
+}
+.menu_wrap input:checked ~* {
+    display: block;
+}
+
+.ch1{
+    display: none;
+}
+
+.img_ch1 {
+    position:absolute;
+    top:0;
+    left:-10px;
+    cursor: pointer;
+}
+
+.ch2 {
+    margin: 20px 0;
+    display: block;
+    font-weight: 700;
+    color:#333;
+    line-height: 40px;
+    position: relative;
+    padding-left: 30px;
+    font-size:1vw;
+    text-align: justify;
+
+}
+
+.img_ch2 {
+    position:absolute;
+    top:9.5px;
+    left:-10px;
+}
+
+.ch3 {
+    margin: 20px 0;
+    display: block;
+    font-weight: 700;
+    color:#333;
+    line-height: 40px;
+    position: relative;
+    padding-left: 30px;
+    font-size:1vw;
+    text-align: justify;
+}
+
+.img_ch3 {
+    position:absolute;
+    top:9.5px;
+    left:-10px;
+}
+

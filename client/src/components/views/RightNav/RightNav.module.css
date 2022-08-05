@@ -1,0 +1,125 @@
+#side_right {
+    float: left;
+    width: 22vw ;
+    height: 60vh ;
+    background-color: #fff;
+    position: relative;
+    /*border-top: 0.01vh solid black; */
+}
+
+.team_make {
+    float: top; 
+    width: 375px; 
+    height: 86px; 
+    /*top: 3%; position: absolute;*/
+    background-color: #fff; 
+    border-top:0.1rem solid #E0E0E0; 
+    border-bottom:0.1rem solid #E0E0E0; 
+    position: relative;
+}
+
+.team_img {
+    position: absolute; top: 34%; left: 11%;
+}
+
+.teamfolder_text {
+    position: absolute; top: 13%; left: 23%; padding: 0;
+    background: none;  border: none; color: #4F4F4F; font-size: 18px; font-weight: 900;
+}
+
+
+input.img_button {
+    background: url(../../../../public/img/charm_plus.png) no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position : absolute;
+    top: 32%;
+    right : 8%;
+}
+
+
+.teamfolder_menu {
+    float: bottom; width: 375px; height:500px; background-color: #fff; border: none; 
+    overflow : auto;
+}
+
+
+.teamfolder_menu div {
+    
+    margin:0;
+    text-align:center;
+    border-bottom: 0.1rem solid #E0E0E0;
+    width: 375px;
+    height: 13%;
+    background-color: #fff;
+}
+
+
+.team_profile {
+    position : relative;
+}
+
+.img_yellow {
+    position : absolute; top: 20%; left: 10%;
+}
+
+.team_text {
+    position : absolute; top: 30%; right: 36%; border:none; background-color:#fff; font-size:16pz; font-weight: 750; color:#4F4F4F; cursor: pointer;
+}
+
+.img_teamperson {
+    position : absolute; top: 28%; right: 14%;
+}
+
+.img_folder {
+    position : absolute; top: 27%; left: 12%;
+}
+
+#side_right2 {
+    float: left;
+    width: 22vw;
+    height: 30vh ;
+    background-color: #fff;
+    position: relative;    
+}
+
+
+.img_pay {
+    bottom: 10%; left: 7%; position: absolute; cursor: pointer;
+
+}
+
+.pay_text {
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 17%;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.pay_person {
+    bottom: 31%; right: 5%; position: absolute;
+}
+
+
+.pay_text2 {
+    position: absolute;
+    bottom: 30%;
+    left: 9.5%;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #828282;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    line-height : 5px;
+}
