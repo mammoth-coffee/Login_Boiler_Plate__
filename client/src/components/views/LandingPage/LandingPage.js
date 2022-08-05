@@ -2,13 +2,14 @@ import { React, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
 function LandingPage() {
 
   let navigate = useNavigate();
 
   useEffect(() => {
     axios.get('/api/hello')
-    .then(response => console.log(response))
+    .then(response =>  {console.log(response)})
   }, [])
 
   const onClickHandler = () => {

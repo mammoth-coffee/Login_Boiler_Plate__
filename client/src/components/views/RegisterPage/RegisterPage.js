@@ -6,6 +6,7 @@ import style from './RegisterStyle.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope, faLock, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
+
 function RegisterPage(props) {
 
   const Dispatch = useDispatch();

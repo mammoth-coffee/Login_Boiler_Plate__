@@ -11,6 +11,8 @@ import {
 import LandingPage from './components/views/LandingPage/LandingPage';
 import LoginPage from './components/views/LoginPage/LoginPage';
 import RegisterPage from './components/views/RegisterPage/RegisterPage';
+import Auth from './hoc/auth'
+
 
 function App() {
   return (
@@ -18,9 +20,17 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route exact path="/" element={ < LandingPage /> }/>
-            <Route exact path="/login" element={ < LoginPage />} />
-            <Route exact path="/register" element={ < RegisterPage /> } />
+            <Route exact path="/" element={ Auth(LandingPage, null )} />
+            <Route exact path="/login" element={ Auth(LoginPage, false) } />
+            <Route exact path="/register" element={ Auth(RegisterPage, false) } />
+            {/* auth가 element(component)를 감싸줘야함 */}
+            {/* Specific Component = 각 페이지 */}
+
+            {/* <Route exact path="/" element={ < LandingPage /> } /> */}
+
+            {/* <Route exact path="/login" element={ < LoginPage />} /> */}
+            
+            {/* <Route exact path="/register" element={ < RegisterPage /> } /> */}
           </Routes>
         </div>
       </Router>
