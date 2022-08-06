@@ -25,6 +25,7 @@ import LinkStorePage from './components/views/LinkStorePage/LinkStorePage'
 import ImageUpload from './components/views/ImageUploadPage/ImageUpload'
 import MemoUpload from './components/views/MemoPage/MemoUpload'
 import FileUploadPage from './components/views/FileUploadPage/FileUploadPage'
+import MyProfilePage from './components/views/MyProfilePage/MyProfilePage'
 
 function App() {
   return (
@@ -45,9 +46,10 @@ function App() {
                         <Route exact path="/imagestore" element={ < ImageUpload /> } />
                         <Route exact path="/memostore" element={ < MemoUpload /> } />
                         <Route exact path="/filestore" element={ < FileUploadPage /> } />
+                        <Route exact path="/myprofilepage" element={ < MyProfilePage /> } />
                         <Route exact path="/login" element={ Auth(LoginPage, false) } />
                         <Route exact path="/register" element={ Auth(RegisterPage, false) } />
-                        
+
                         {/* <Route exact path="/" element={ Auth(LandingPage, null )} /> */}
                         {/* <Route exact path="/login" element={ Auth(LoginPage, false) } /> */}
                         {/* <Route exact path="/register" element={ Auth(RegisterPage, false) } /> */}
