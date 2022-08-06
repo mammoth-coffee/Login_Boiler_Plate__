@@ -2,18 +2,36 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-html, body {
+#contents {
+    overflow-y: scroll;
+    float: left;
+    width: 61%;
+    height: 90% ;
+    background-color: #EEF2F9;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    padding : 30px 20px;
+}
+
+#contents_wrap {
+    height : 100%;
+    margin : 0 4.5%;
+    width : auto;
+    display: flex;
+    flex-direction : column;
+    justify-content: flex-start;
+}
+
+/* html, body {
     margin: 0;
     border : 0;
 }
 
-
 * {
     font-family: 'NanumSquare', sans-serif;
     box-sizing: border-box;
-
 }
-
 
 .contents {
     float: left;
@@ -21,8 +39,7 @@ html, body {
     height: 90vh ;
     background-color: #EEF2F9;
     overflow: auto;
-    
-}
+} */
 
 
 /*콘텐츠 영역*/

@@ -34,6 +34,8 @@ function MemoUpload() {
     //   };
 
   return (
+        <div id={style.contents}>
+            <div id={style.contents_wrap}>
                 <div className = {style.container}>
                     {/* <div className={style.MemoContainer}>
                         <form method='post'>
@@ -61,6 +63,8 @@ function MemoUpload() {
                     <MemoPreview countList={countList}/>
                 
                 </div>
+            </div>
+        </div>
 
   );
 }

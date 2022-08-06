@@ -75,6 +75,8 @@ function ImageUpload() {
 
 
   return (
+    <div id={style.contents}>
+        <div id={style.contents_wrap}>
           <div className = {style.container}>
               <form method="post">
                   <label className={style.label} ref={uploadBoxRef} htmlFor="ImgInput">
@@ -84,6 +86,8 @@ function ImageUpload() {
                   <div className={style.preview_container}>{previewImages}</div>
               </form>
           </div>
+        </div>
+      </div>
   );
 }
 

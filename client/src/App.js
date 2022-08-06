@@ -34,8 +34,8 @@ function App() {
         < Header />
         < LeftNav />
        
-        <div id={style.contents}>
-            <div id={style.contents_wrap}>
+        {/* <div id={style.contents}>
+            <div id={style.contents_wrap}> */}
 
                 <Router>
             
@@ -45,14 +45,17 @@ function App() {
                         <Route exact path="/imagestore" element={ < ImageUpload /> } />
                         <Route exact path="/memostore" element={ < MemoUpload /> } />
                         <Route exact path="/filestore" element={ < FileUploadPage /> } />
-                        <Route exact path="/" element={ Auth(LandingPage, null )} />
                         <Route exact path="/login" element={ Auth(LoginPage, false) } />
                         <Route exact path="/register" element={ Auth(RegisterPage, false) } />
+                        
+                        {/* <Route exact path="/" element={ Auth(LandingPage, null )} /> */}
+                        {/* <Route exact path="/login" element={ Auth(LoginPage, false) } /> */}
+                        {/* <Route exact path="/register" element={ Auth(RegisterPage, false) } /> */}
                     </Routes>
             
                 </Router>
-            </div>
-         </div>
+            {/* </div>
+         </div> */}
 
         < RightNav1 />
         < RightNav2 />
@@ -62,53 +65,4 @@ function App() {
   );
 }
 
-
-
-
-
-
-
-
-// function App() {
-//   return (
-//     <div className='App'>
-//       <Router>
-//         <div>
-//           <Routes>
-//             <Route exact path="/" element={ Auth(LandingPage, null )} />
-//             <Route exact path="/login" element={ Auth(LoginPage, false) } />
-//             <Route exact path="/register" element={ Auth(RegisterPage, false) } />
-//             {/* auth가 element(component)를 감싸줘야함 */}
-//             {/* Specific Component = 각 페이지 */}
-
-//             {/* <Route exact path="/" element={ < LandingPage /> } /> */}
-
-//             {/* <Route exact path="/login" element={ < LoginPage />} /> */}
-            
-//             {/* <Route exact path="/register" element={ < RegisterPage /> } /> */}
-//           </Routes>
-//         </div>
-//       </Router>
-//     </div>
-//   )
-// }
-
 export default App;
-
-
-// <div className="App">
-    // <header className="App-header">
-    //   <img src={logo} className="App-logo" alt="logo" />
-    //   <p>
-    //     Edit <code>src/App.js</code> and save to reload.
-    //   </p>
-    //   <a
-    //     className="App-link"
-    //     href="https://reactjs.org"
-    //     target="_blank"
-    //     rel="noopener noreferrer"
-    //   >
-    //     Learn React
-    //   </a>
-    // </header>
-// </div>

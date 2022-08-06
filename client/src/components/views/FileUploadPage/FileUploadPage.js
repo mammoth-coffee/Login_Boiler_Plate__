@@ -50,32 +50,27 @@ const FileUploadPage = () => {
 
 
     return(
-        <div id={style.fileStore}>
-            <div id={style.fileAdd}> 
-            <form onSubmit={onSubmit} className={style.upload_input}>
-                
-                        <input type="file" id="file" ref={fileInput}  onChange={onFileHandler} className={style.fileInput}/>
-
-                    
-                        <button onClick={onEmbedFileHandler} className={style.fileBtn}>파일 업로드</button>
-
-                        <div className = {style.fileimg}>
-                            <img src = "/img/filepage/filechoice.png" />
-                        </div>
-
+        <div id={style.contents}>
+            <div id={style.contents_wrap}>
+                <div id={style.fileStore}>
+                    <div id={style.fileAdd}> 
+                        <form onSubmit={onSubmit} className={style.upload_input}>
                         
-                
-                
-            </form>
-                
-                
-            </div>
-            
-            <FileUploadBoard FileList = {FileList} />
+                            <input type="file" id="file" ref={fileInput}  onChange={onFileHandler} className={style.fileInput}/>
+                            <button onClick={onEmbedFileHandler} className={style.fileBtn}>파일 업로드</button>
+                            <div className = {style.fileimg}>
+                                <img src = "/img/filepage/filechoice.png" />
+                            </div>
 
-            
+                        </form>
+                    </div>
+
+                    <FileUploadBoard FileList = {FileList} />
+
+                </div>
+            </div>
         </div>
-    )
+    )   
 }
 
 

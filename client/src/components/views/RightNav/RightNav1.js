@@ -15,17 +15,18 @@ function RightNav1() {
             </div>
             <div className = {style.teamfolder_menu}>
                 <div className={style.team_profile}>
-                    <a href="#">
-                        <img className={style.img_yellow} src="/img/yellowCircle.png" />
+                    <a href="#" className={style.img_yellow}>
+                        <img src="/img/yellowCircle.png" />
                     </a>
                     <a href="#">
-                        <input type="button" className={style.team_text} value="과제헬퍼"/>
+                        <input type="button" value="과제헬퍼" className={style.team_text}/>
+                        {/* 디자인 바꿔야할듯 */}
                     </a>
-                    <a href="#">
-                        <img className={style.img_teamperson} src="/img/personPlus.png" />
+                    <a href="#" className={style.img_teamperson}>
+                        <img src="/img/personPlus.png" />
                     </a>
-                    <a href="#">
-                        <img className={style.img_folder} src="/img/folderLine.png" />
+                    <a href="#" className={style.img_folder}>
+                        <img src="/img/folderLine.png" />
                     </a>
                 </div>
                 <div></div>

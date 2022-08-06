@@ -16,38 +16,59 @@
     border-top:0.1rem solid #E0E0E0; 
     border-bottom:0.1rem solid #E0E0E0; 
     position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex를 줘서 가운데 정렬로 맞췄습니다. */
 }
 
 .team_img {
-    position: absolute; top: 34%; left: 11%;
+    position: absolute; 
+    /* top: 34%;  */
+    left: 11%;
+    /* top요소 주석처리 */
 }
 
 .teamfolder_text {
-    position: absolute; top: 13%; left: 23%; padding: 0;
-    background: none;  border: none; color: #4F4F4F; font-size: 18px; font-weight: 900;
+    position: absolute; 
+    /* top: 13%;  */
+    left: 23%;
+    padding: 0;
+    background: none;  
+    border: none; 
+    color: #4F4F4F; 
+    font-size: 18px; 
+    font-weight: 900;
+    /* top요소 주석처리 */
 }
 
 
 input.img_button {
-    background: url(../../../../public/img/charm_plus.png) no-repeat;
+    background: url(../../../../public/img/charm_plus.png);
+    background-position: center; 
+    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     position : absolute;
-    top: 32%;
-    right : 8%;
+    /* top: 32%; */
+    right : 14%;
+    /* top요소 주석처리, 크기 24x24로 변경, 배경 가운데 정렬 */
 }
 
 
 .teamfolder_menu {
-    float: bottom; width: 375px; height:500px; background-color: #fff; border: none; 
+    float: bottom; 
+    width: 375px; 
+    height:500px; 
+    background-color: #fff; 
+    border: none; 
     overflow : auto;
 }
 
 
 .teamfolder_menu div {
-    
     margin:0;
     text-align:center;
     border-bottom: 0.1rem solid #E0E0E0;
@@ -59,22 +80,50 @@ input.img_button {
 
 .team_profile {
     position : relative;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: row;
+    /* flex, align-items를 줘서 가운데 정렬 */
 }
 
 .img_yellow {
-    position : absolute; top: 20%; left: 10%;
+    position : absolute;
+    /* top: 20%;  */
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top요소 주석처리, 원래 img태그에 있던 class를 a태그로 옮김, 가운데 정렬 */
 }
 
 .team_text {
-    position : absolute; top: 30%; right: 36%; border:none; background-color:#fff; font-size:16pz; font-weight: 750; color:#4F4F4F; cursor: pointer;
+    position : absolute; 
+    /* top: 30%;  */
+    right: 36%; 
+    border:none; 
+    background-color:#fff; 
+    font-size:16px; 
+    font-weight: 750; 
+    color:#4F4F4F; 
+    cursor: pointer;
+    /* top요소 주석처리 */
 }
 
 .img_teamperson {
-    position : absolute; top: 28%; right: 14%;
+    position : absolute; 
+    /* top: 28%;  */
+    right: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top요소 주석처리, 원래 img태그에 있던 class를 a태그로 옮김, 가운데 정렬 */
 }
 
 .img_folder {
-    position : absolute; top: 27%; left: 12%;
+    position : absolute; 
+    left: 12%;
+    /* 원래 img태그에 있던 class를 a태그로 옮김, 가운데 정렬 */
 }
 
 #side_right2 {
